@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fitness Website landing Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -23,17 +24,43 @@
     <div class="banner">
         <!-- Navigation -->
         <ul class="nav">
-        <li><a href="#">health</a></li>
-        <li><a href="#">fitness</a></li>
-        <li><a href="#">workout</a></li>
-        <li><a href="#">contact</a></li>
-    </ul>
-    </div>
+            <li><a href="#">health</a></li>
+            <li><a href="#">fitness</a></li>
+            <li><a href="#">workout</a></li>
+            <li><a href="#">contact</a></li>
+        </ul>
+        <!-- slider section -->
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <img src="images/fitness-model-1.png" alt="human img">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/fitness-model-2.png" alt="human img">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/fitness-model-3.png" alt="human img">
+                </div>
+            </div>
+            <div class="control">
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
 
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </div>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/swiper.js"></script>
 </body>
 
-</html>  
+</html>

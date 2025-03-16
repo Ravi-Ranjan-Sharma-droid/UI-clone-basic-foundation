@@ -196,3 +196,18 @@ header .logo {
   transition: ease-in-out 0.5s;
   transform-origin: bottom;
 }
+
+.swiper.active{
+  opacity: 0;
+  visibility: hidden;
+}
+
+.swiper .control{
+  position: absolute;
+  right: 2%;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 200px;
+  width: 50px;
+  z-index: 1000;
+}

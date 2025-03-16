@@ -108,3 +108,31 @@ header .logo {
   right: 8px;
 }
 
+/* banner section */
+
+.banner{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 0 100px;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(-45deg, #d8e7fc, #e8d8fc);
+  align-items: end;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.banner::after{
+  position: absolute;
+  content: '';
+  top: 100px;
+  left: 100px;
+  right: 100px;
+  bottom: 100px;
+  background: transparent;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(20px);
+  transition: 0.5s;
+}
+

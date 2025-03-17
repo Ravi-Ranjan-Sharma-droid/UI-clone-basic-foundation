@@ -197,12 +197,12 @@ header .logo {
   transform-origin: bottom;
 }
 
-.swiper.active{
+.swiper.active {
   opacity: 0;
   visibility: hidden;
 }
 
-.swiper .control{
+.swiper .control {
   position: absolute;
   right: 2%;
   top: 50%;
@@ -212,7 +212,7 @@ header .logo {
   z-index: 1000;
 }
 
-.swiper-button-prev{
+.swiper-button-prev {
   position: absolute;
   right: 50%;
   top: 30%;
@@ -220,11 +220,35 @@ header .logo {
   width: 25px;
   height: 25;
 }
-.swiper-button-next{
+.swiper-button-next {
   position: absolute;
   right: 30%;
   top: 80%;
   transform: rotateZ(90deg);
   width: 25px;
   height: 25;
+}
+
+.swiper .swiper-button-next::after,
+.swiper .swiper-button-prev::after {
+  font-size: 0.8rem;
+  line-height: 0;
+  width: 25px;
+  height: 25px;
+  background: transparent;
+  border-radius: 50%;
+  transition: 0.5s;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper .swiper-button-next::hover,
+.swiper .swiper-button-prev::hover {
+  border-radius: 50%;
+  background: rgba(26, 36, 72, 0.1);
+  color: rgba(255, 255, 225, 0.8);
 }

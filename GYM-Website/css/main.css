@@ -253,7 +253,7 @@ header .logo {
   color: rgba(255, 255, 225, 0.8);
 }
 
-.swiper .swiper-pagination{
+.swiper .swiper-pagination {
   position: absolute;
   right: 53%;
   top: 54%;
@@ -261,7 +261,7 @@ header .logo {
   z-index: 10;
 }
 
-.swiper .swiper-pagination .swiper-pagination-bullet{
+.swiper .swiper-pagination .swiper-pagination-bullet {
   width: 8px;
   height: 8px;
   background: transparent;
@@ -270,7 +270,7 @@ header .logo {
   z-index: 10;
 }
 
-.swiper .swiper-pagination .swiper-pagination-bullet-active{
+.swiper .swiper-pagination .swiper-pagination-bullet-active {
   background: var(--primary);
 }
 
@@ -282,7 +282,7 @@ header .logo {
   max-width: 600px;
   left: 57%;
   top: 50%;
-  transform: translateY(-50%,) scale(1);
+  transform: translateY(-50%) scale(1);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -291,8 +291,8 @@ header .logo {
   transition: 0.5s;
 }
 
-.banner .content.active{
-  transform: translateY(-50%,) scale(0);
+.banner .content.active {
+  transform: translateY(-50%) scale(0);
 }
 
 .banner .content h2 {
@@ -321,3 +321,31 @@ header .logo {
   transition: 0.3s;
 }
 
+.banner .title-left {
+  font-family: "Berkshire Swash", cursive;
+  text-transform: uppercase;
+  line-height: 1em;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotateZ(90deg);
+  left: -20px;
+  font-size: 10em;
+  letter-spacing: 10px;
+  color: var(--primary);
+  opacity: 0.1;
+  z-index: 1;
+}
+
+.banner .title-right {
+  font-family: "Berkshire Swash", cursive;
+  text-transform: uppercase;
+  line-height: 1em;
+  position: absolute;
+  top: 70%;
+  right: 6%;
+  font-size: 7em;
+  z-index: 1;
+  opacity: 0.1;
+  color: var(--primary);
+  letter-spacing: 2px;
+}

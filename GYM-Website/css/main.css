@@ -211,3 +211,20 @@ header .logo {
   width: 50px;
   z-index: 1000;
 }
+
+.swiper-button-prev{
+  position: absolute;
+  right: 50%;
+  top: 30%;
+  transform: rotateZ(90deg);
+  width: 25px;
+  height: 25;
+}
+.swiper-button-next{
+  position: absolute;
+  right: 30%;
+  top: 80%;
+  transform: rotateZ(90deg);
+  width: 25px;
+  height: 25;
+}

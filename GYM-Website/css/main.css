@@ -252,3 +252,24 @@ header .logo {
   background: rgba(26, 36, 72, 0.1);
   color: rgba(255, 255, 225, 0.8);
 }
+
+.swiper .swiper-pagination{
+  position: absolute;
+  right: 53%;
+  top: 54%;
+  transform: translate(50%, -50%);
+  z-index: 10;
+}
+
+.swiper .swiper-pagination .swiper-pagination-bullet{
+  width: 8px;
+  height: 8px;
+  background: transparent;
+  opacity: 1;
+  border: 1px solid var(--primary);
+  z-index: 10;
+}
+
+.swiper .swiper-pagination .swiper-pagination-bullet-active{
+  background: var(--primary);
+}

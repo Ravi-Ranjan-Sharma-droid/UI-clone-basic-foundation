@@ -4,3 +4,16 @@ function toggleNav(){
     nav.classList.toggle('active')
     menu.classList.toggle('active')
 }
+
+function toggelVideo() {
+    const video = document.querySelector('.bg-video');
+    const play = document.querySelector('.play');
+    const slider = document.querySelector('.swipe');
+    const content = document.querySelector('.content');
+
+    video.classList.toggle('active')
+    play.classList.toggle('active')
+    slider.classList.toggle('active')
+    content.classList.toggle('active') 
+    
+}

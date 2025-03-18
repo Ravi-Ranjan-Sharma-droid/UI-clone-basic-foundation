@@ -47,7 +47,7 @@ header::before {
 
 header::after {
   position: absolute;
-  content: '';
+  content: "";
   top: 0;
   right: 0;
   width: 320px;
@@ -125,7 +125,7 @@ header .logo {
 
 .banner::after {
   position: absolute;
-  content: '';
+  content: "";
   top: 100px;
   left: 100px;
   right: 100px;
@@ -321,7 +321,7 @@ header .logo {
   transition: 0.3s;
 }
 
-.banner .content a:hover{
+.banner .content a:hover {
   color: var(--primary);
   background: transparent;
 }
@@ -368,9 +368,9 @@ header .logo {
   transition: 0.5s;
   opacity: 0;
   visibility: hidden;
-} 
+}
 
-.bg-video.active{
+.bg-video.active {
   opacity: 1;
   visibility: visible;
 }
@@ -393,12 +393,12 @@ header .logo {
   z-index: 1;
 }
 
-.banner .video video{
+.banner .video video {
   position: relative;
   max-height: 150px;
 }
 
-.banner .video .service  {
+.banner .video .service {
   position: relative;
   padding: 10px 20px;
   height: 100%;
@@ -409,9 +409,9 @@ header .logo {
   cursor: pointer;
 }
 
-.banner .video .service:hover::before{
+.banner .video .service:hover::before {
   position: absolute;
-  content: '';
+  content: "";
   bottom: 0;
   left: 0;
   width: 100%;
@@ -428,17 +428,34 @@ header .logo {
   text-align: center;
 }
 
-.banner .video p{
+.banner .video p {
   color: var(--primary);
   font-size: 0.7em;
   font-weight: 300;
   text-align: center;
 }
 
-.banner .video .play{
+.banner .video .play {
   padding: 20px;
   height: 100%;
   background: var(--primary);
   display: flex;
   align-items: center;
+}
+
+.banner .video .play ion-icon {
+  font-size: 3em;
+  color: #ffffff;
+}
+
+.banner .video .play .close {
+  display: none;
+}
+
+.banner .video .play.active .close {
+  display: block;
+}
+
+.banner .video .play.active .open {
+  display: none;
 }

@@ -47,7 +47,7 @@ header::before {
 
 header::after {
   position: absolute;
-  content: "";
+  content: '';
   top: 0;
   right: 0;
   width: 320px;
@@ -125,7 +125,7 @@ header .logo {
 
 .banner::after {
   position: absolute;
-  content: "";
+  content: '';
   top: 100px;
   left: 100px;
   right: 100px;
@@ -218,7 +218,7 @@ header .logo {
   top: 30%;
   transform: rotateZ(90deg);
   width: 25px;
-  height: 25;
+  height: 25px;
 }
 .swiper-button-next {
   position: absolute;
@@ -226,7 +226,7 @@ header .logo {
   top: 80%;
   transform: rotateZ(90deg);
   width: 25px;
-  height: 25;
+  height: 25px;
 }
 
 .swiper .swiper-button-next::after,
@@ -255,8 +255,8 @@ header .logo {
 
 .swiper .swiper-pagination {
   position: absolute;
-  right: 53%;
-  top: 54%;
+  right: 50%;
+  top: 50%;
   transform: translate(50%, -50%);
   z-index: 10;
 }
@@ -319,6 +319,11 @@ header .logo {
   padding: 10px 20px;
   border: 1px solid var(--primary);
   transition: 0.3s;
+}
+
+.banner .content a:hover{
+  color: var(--primary);
+  background: transparent;
 }
 
 .banner .title-left {

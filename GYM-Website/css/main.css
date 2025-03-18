@@ -220,6 +220,7 @@ header .logo {
   width: 25px;
   height: 25px;
 }
+
 .swiper-button-next {
   position: absolute;
   right: 30%;
@@ -246,8 +247,8 @@ header .logo {
   align-items: center;
 }
 
-.swiper .swiper-button-next::hover,
-.swiper .swiper-button-prev::hover {
+.swiper .swiper-button-next:hover,
+.swiper .swiper-button-prev:hover {
   border-radius: 50%;
   background: rgba(26, 36, 72, 0.1);
   color: rgba(255, 255, 225, 0.8);

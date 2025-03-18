@@ -10,9 +10,11 @@ function toggleVideo() {
     const play = document.querySelector(".play");
     const slider = document.querySelector(".swiper");
     const content = document.querySelector(".content");
+    const form = document.querySelector('form')
 
     video.classList.toggle("active");
     play.classList.toggle("active");
     slider.classList.toggle("active");
     content.classList.toggle("active");
+    form.classList.toggle("active")
 }

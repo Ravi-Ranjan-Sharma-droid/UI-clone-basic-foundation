@@ -521,11 +521,11 @@ form input[type="submit"] {
   transition: 0.3s;
 }
 
-form input[type="submit"]:hover{
+form input[type="submit"]:hover {
   box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.3);
 }
 
-form .signup{
+form .signup {
   position: relative;
   margin-top: 20px;
   font-size: 0.7rem;
@@ -535,10 +535,140 @@ form .signup{
   font-weight: 600;
 }
 
-form .signup a{
+form .signup a {
   font-weight: 600;
   text-decoration: none;
   color: var(--primary);
 }
 
 /* Social icons */
+
+.sci {
+  position: absolute;
+  left: 150px;
+  bottom: 130px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transform: scale(1);
+  transition: 0.5s;
+  z-index: 1000;
+  gap: 20px;
+}
+
+.sci.active {
+  transform: scale(0);
+}
+
+.sci li {
+  list-style: none;
+}
+
+.sci li a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.sci li a ion-icon {
+  font-style: none;
+  color: var(--primary);
+  transition: 0.5s;
+}
+
+.sci li a ion-icon:hover {
+  color: #8d20fa;
+}
+
+/* Responsive Design */
+
+@media (max-width: 600px) {
+  header {
+    padding: 10px;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+  }
+  header::before {
+    width: 130px;
+    height: 45px;
+  }
+
+  header::after {
+    width: 220px;
+    height: 45px;
+  }
+  .search {
+    width: 200px;
+  }
+  .nav {
+    left: 20px;
+    top: 65px;
+    bottom: 20px;
+  }
+  .banner {
+    padding: 0 20px;
+  }
+  .banner::after {
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+  }
+  .swiper .model-img {
+    position: absolute;
+    z-index: 10;
+    max-width: 120%;
+    padding-top: 100px;
+    left: 0;
+    top: -20px;
+    transition: ease-in-out 0.5s;
+  }
+  .banner .title-left {
+    left: -65px;
+    font-size: 8rem;
+    letter-spacing: 6px;
+  }
+  .banner .title-right {
+    display: none;
+  }
+  .banner .content {
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%) scale(1);
+    align-items: center;
+    gap: 20px;
+  }
+  .banner.content h2 {
+    font-size: 1.6em;
+    font-weight: 500;
+  }
+  .banner.content {
+    text-align: center;
+    font-size: 0.8em;
+  }
+  .banner .video {
+    bottom: 20px;
+    left: 20px;
+    width: calc(100%-20px);
+  }
+  .banner .video .play {
+    padding: 10px;
+  }
+  .banner form {
+    width: 300px;
+    height: 400px;
+    padding: 20px;
+  }
+  .sci{
+    position: absolute;
+    left: 35px;
+    top: 50px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+}

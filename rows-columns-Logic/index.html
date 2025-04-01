@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4x4 Square Pattern</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(50px, 1fr));
+            grid-template-rows: repeat(4, minmax(50px, 1fr));
+            gap: 5px;
+        }
+
+        .square {
+            width: 60px;
+            height: 60px;
+            background-color: steelblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.2s;
+            cursor: pointer;
+        }
+
+        .square:hover {
+            background-color: darkorange;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid" id="grid"></div>
+
+    <script>
+        const grid = document.getElementById("grid");
+
+        for (let i = 1; i <= 16; i++) {
+            let square = document.createElement("div");
+            square.classList.add("square");
+            square.textContent = i; // Set default number
+
+            let row = Math.ceil(i / 4); // Calculate row (1-based)
+            let col = (i - 1) % 4 + 1;  // Calculate column (1-based)
+            let positionText = `P${row}${col}`; // Create "P[row][col]"
+
+            // On hover, show matrix position
+            square.addEventListener("mouseenter", function () {
+                square.textContent = positionText;
+            });
+
+            // On hover out, restore original number
+            square.addEventListener("mouseleave", function () {
+                square.textContent = i;
+            });
+
+            grid.appendChild(square);
+        }
+    </script>
+</body>
+
+</html>

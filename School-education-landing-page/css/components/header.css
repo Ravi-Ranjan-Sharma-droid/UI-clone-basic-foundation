@@ -2,8 +2,21 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-block: 16px;
 }
 
 .header .logo{
     width: 4.955625rem;
+}
+
+@media (width >= 50.625em){
+  .header{
+    padding-block: 24px;
+  }
+}
+
+@media (width >= 50.625em){
+  .header{
+    padding-block: 24px;
+  }
 }

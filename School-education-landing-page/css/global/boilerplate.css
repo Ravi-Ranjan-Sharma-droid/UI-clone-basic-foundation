@@ -23,8 +23,13 @@ body {
 h1,
 h2,
 h3 {
+  line-height: 1.2;
   font-weight: 800;
   margin: 0;
+}
+
+a{
+  text-decoration: none;
 }
 
 img {

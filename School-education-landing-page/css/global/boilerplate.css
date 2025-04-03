@@ -17,10 +17,13 @@
 
 body {
   margin: 0;
+  font-weight: 500;
+  font-family: 'Plus Jakarta Sans', Arial, Helvetica, sans-serif;
 }
 h1,
 h2,
 h3 {
+  font-weight: 800;
   margin: 0;
 }
 

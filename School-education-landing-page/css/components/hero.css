@@ -1,5 +1,7 @@
 .hero{
     display: grid;
+    row-gap: 48px;
+    padding-block: 64px;
 }
 
 .hero h1{
@@ -10,3 +12,31 @@
 .hero p {
     margin-block: 24px 40px;
 }
+
+.hero picture{
+    max-width: 37.5rem;
+    justify-self: center;
+}
+
+/* Tablet */
+@media (width >= 50.625em){
+     .hero{
+        grid-template-columns: repeat(2,1fr);
+        position: relative;
+    }
+    .hero_text{
+        padding-block: 42px;
+        padding-inline-end: 0;
+    }
+    .hero picture{
+        max-width: none;
+        position: absolute;
+        right: 0;
+        translate: 42% -24%;
+    }
+}
+/* desktop */
+@media (width >= 75em){
+
+}
+ 

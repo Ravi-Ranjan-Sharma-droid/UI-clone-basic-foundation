@@ -1,0 +1,12 @@
+.hero{
+    display: grid;
+}
+
+.hero h1{
+    font-size: var(--fs-1);
+    color: var(--color-blue-900);
+}
+
+.hero p {
+    margin-block: 24px 40px;
+}

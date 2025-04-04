@@ -1,8 +1,10 @@
 .button{
+    display: inline-block;
     font-size: var(--fs-7);
     line-height: 1.5;
     font-weight: 700;
-    transition: background 150ms ease-in-out;
+    transition:  150ms ease-in-out; 
+    transition-property: background, opacity;
 }
 
 .button.dark{
@@ -14,4 +16,15 @@
 
 .button.dark:hover{
     background: var(--color-blue-600);
+}
+
+.button.pink{
+    background: var(--gradient-pink);
+    color: var(--color-white);
+    padding: 10.5px 24px;
+    border-radius: 28px;
+}
+
+.button.pink:hover{
+    opacity: 0.5; /* We Can always fix it later :) */
 }

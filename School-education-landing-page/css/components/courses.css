@@ -21,6 +21,9 @@
 .courses .course{
     background: var(--color-white);
     position: relative;
+    display: grid;
+    gap: 24px;
+    grid-template-rows: min-content 1fr min-content;
 }
 
 .courses .wrapper{
@@ -38,14 +41,32 @@
 }
 .courses p {
     font-size: var(--fs-5);
+    margin: 0;
 }
 .courses a {
     font-size: var(--fs-7);
     font-weight: 700;
     color: var(--color-pink-600);
-    transition: opacity 150ms ease-in-out ;
+    transition: opacity 150ms ease-in-out;
+    align-self: end;
 }
 .courses a:hover{
     opacity: 50%;
 }
 
+@media (width >= 50.625em){
+    .courses .wrapper{
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 24px;
+    }
+    .course .block.title{
+        padding-block-start: 64px;
+    }
+}
+
+@media (width >= 75em){
+    .courses .wrapper{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 84px 32px;
+    }
+}

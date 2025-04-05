@@ -28,6 +28,16 @@
 .button.pink:hover{
     opacity: 0.5; /* We Can always fix it later :) */
 }
+.button.purple{
+    background: var(--gradient-purple);
+    color: var(--color-white);
+    padding: 10.5px 24px;
+    border-radius: 28px;
+}
+
+.button.purple:hover{
+    opacity: 0.5; /* We Can always fix it later :) */
+}
 
 @media (width >= 75em){
     .button {

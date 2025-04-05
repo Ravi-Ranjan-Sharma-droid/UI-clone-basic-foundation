@@ -47,3 +47,16 @@ img {
 main{
   overflow-x: clip;
 }
+.logo:hover{
+  opacity: 0.75;
+  transition: opacity 150ms ease-in-out;
+}
+.logo{
+    width: 4.955625rem;
+}
+/* desktop */
+@media (width >= 75em){
+  .logo{
+    width: 6.9375rem;
+  }
+}

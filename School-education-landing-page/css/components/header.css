@@ -5,18 +5,10 @@
   padding-block: 16px;
 }
 
-.header .logo{
-    width: 4.955625rem;
-}
+
 /* tablet */
 @media (width >= 50.625em){
   .header{
     padding-block: 24px;
-  }
-}
-/* desktop */
-@media (width >= 75em){
-  .header.logo{
-    width: 6.9375rem;
   }
 }

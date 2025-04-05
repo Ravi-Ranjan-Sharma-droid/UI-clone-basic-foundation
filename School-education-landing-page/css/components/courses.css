@@ -14,7 +14,7 @@
 }
 
 .courses{
-    background:  linear-gradient(#fff, #f0f1ff);
+    background:  linear-gradient(#fff, #f0f1ff 40%);
     padding-block: 64px 80px;
 }
 
@@ -34,7 +34,7 @@
 .courses img{
     position: absolute;
     top: 0;
-    translate: 0 -50%;
+    translate: 32px -50%;
 }
 .courses h3 {
     font-size: var(--fs-4);

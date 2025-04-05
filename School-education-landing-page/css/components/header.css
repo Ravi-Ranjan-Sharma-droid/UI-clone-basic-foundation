@@ -15,8 +15,8 @@
   }
 }
 /* desktop */
-@media (width >= 50.625em){
-  .header{
-    padding-block: 24px;
+@media (width >= 75em){
+  .header.logo{
+    width: 6.9375rem;
   }
 }

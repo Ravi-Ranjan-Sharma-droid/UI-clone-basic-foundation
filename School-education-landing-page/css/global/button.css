@@ -28,3 +28,9 @@
 .button.pink:hover{
     opacity: 0.5; /* We Can always fix it later :) */
 }
+
+@media (width >= 75em){
+    .button {
+        padding: 16px 32px;
+    }
+}

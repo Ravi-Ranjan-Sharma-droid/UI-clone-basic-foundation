@@ -1,7 +1,3 @@
-.courses{
-
-}
-
 .courses .block.title{
     background: var(--gradient-pink);
     color: var(--color-white);
@@ -14,8 +10,42 @@
 
 .courses .block{
     padding: 64px 32px 40px;
+    border-radius: 15px;
 }
 
 .courses{
     background:  linear-gradient(#fff, #f0f1ff);
+    padding-block: 64px 80px;
 }
+
+.courses .course{
+    background: var(--color-white);
+    position: relative;
+}
+
+.courses .wrapper{
+    display: grid;
+    row-gap: 60px;
+}
+
+.courses img{
+    position: absolute;
+    top: 0;
+    translate: 0 -50%;
+}
+.courses h3 {
+    font-size: var(--fs-4);
+}
+.courses p {
+    font-size: var(--fs-5);
+}
+.courses a {
+    font-size: var(--fs-7);
+    font-weight: 700;
+    color: var(--color-pink-600);
+    transition: opacity 150ms ease-in-out ;
+}
+.courses a:hover{
+    opacity: 50%;
+}
+

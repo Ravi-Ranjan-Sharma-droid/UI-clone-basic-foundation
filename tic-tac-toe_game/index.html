@@ -1,11 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tic Tac Toe</title>
+    <title>Tic Tac Toe - Rolling with Win</title>
+
 </head>
+    <style>
+            
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px;
+            color: #f4a460;
+        }
+
+        table {
+            width: 300px;
+            margin: auto;
+            border-collapse: collapse;
+        }
+
+        td,
+        th {
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            font-size: 2rem;
+            line-height: 98px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid #ccc;
+        }
+
+        .old {
+            opacity: 0.5;
+        }
+
+        .winner {
+            background-color: #f4a460;
+            color: white;
+        }
+
+        #restart {
+            display: block;
+            width: 150px;
+            margin: 20px auto;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+    </style>
 <body>
-    
+    <h1>Tic Tac Toe</h1>
+
+    <table id="tictactoe-board">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+    <button id="restart">Restart Game</button>
+
 </body>
+    <script>
+
+    const board = document.getElementById('tictactoe-board');
+    const cells = board.querySelectorAll('td');
+
+    let currentPlayer = 'X';
+    let moveHistory = [];
+    let gameWon = false;
+
+    const winningCombos = [
+        [0, 1, 2],
+        [3, 4, 5],
+        [6, 7, 8],
+        [0, 3, 6],
+        [1, 4, 7],
+        [2, 5, 8],
+        [0, 4, 8],
+        [2, 4, 6]
+    ];
+
+    function checkWin() {
+        for (let combo of winningCombos) {
+            const [a, b, c] = combo;
+            if (
+                cells[a].textContent &&
+                cells[a].textContent === cells[b].textContent &&
+                cells[b].textContent === cells[c].textContent
+            ) {
+                cells[a].classList.add('winner');
+                cells[b].classList.add('winner');
+                cells[c].classList.add('winner');
+                gameWon = true;
+                alert(`${cells[a].textContent} wins!`);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    function handleCellClick(event) {
+        const cell = event.target;
+
+        if (gameWon || cell.textContent) return;
+
+        if (moveHistory.length === 6) {
+            const oldestCell = moveHistory.shift();
+            oldestCell.textContent = '';
+            oldestCell.classList.remove('old', 'winner');
+        }
+
+        cell.textContent = currentPlayer;
+        moveHistory.push(cell);
+
+        if (moveHistory.length === 6) {
+            moveHistory[0].classList.add('old');
+        }
+
+        if (checkWin()) return;
+
+        currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+    }
+
+    cells.forEach(cell => {
+        cell.addEventListener('click', handleCellClick);
+    });
+
+    document.getElementById('restart').addEventListener('click', () => {
+        cells.forEach(cell => {
+            cell.textContent = '';
+            cell.classList.remove('old', 'winner');
+        });
+        currentPlayer = 'X';
+        moveHistory = [];
+        gameWon = false;
+    });
+    </script>
 </html>
